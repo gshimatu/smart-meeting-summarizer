@@ -2,7 +2,14 @@ from fastapi import UploadFile, HTTPException
 from pathlib import Path
 from app.core.config import UPLOAD_DIR, MAX_FILE_SIZE_MB
 
-ALLOWED_EXTENSIONS = {".mp3", ".wav", ".m4a", ".txt"}
+ALLOWED_EXTENSIONS = {
+    ".mp3",
+    ".wav",
+    ".m4a",
+    ".mpeg",
+    ".txt"
+}
+
 
 
 def save_uploaded_file(file: UploadFile) -> Path:
